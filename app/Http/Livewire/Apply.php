@@ -53,8 +53,16 @@ class Apply extends Component
 
         return back()->with('success', 'Request successfully submitted');
     }
+
+    public function viewRequests()
+    {
+        return redirect('requests');
+    }
+
     public function render()
     {
+
+
         return view('livewire.apply');
     }
 }
