@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -14,7 +13,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('requests', function (Blueprint $table) {
-            $table->id();
+            $table->integer('request_id')->autoIncrement();
+            $table->string('name');
+            $table->string('surname');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->string('type');
+            $table->string('reason');
+            $table->integer('leave_days')->default(10);
             $table->timestamps();
         });
     }
