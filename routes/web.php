@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Apply;
+use App\Http\Livewire\Requests;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect('/apply');
 });
+
+Route::get('/apply', Apply::class);
+Route::get('/requests', Requests::class);
