@@ -96,5 +96,11 @@
         <div class="btn-block">
             <button type="submit">Submit</button>
         </div>
+
+        <div class="btn-block">
+            <button type="button" wire:click="viewRequests"
+             style="padding:0px;color:green;background-color: rgb(255, 255, 255);">View requests</button>
+        </div>
     </form>
+
 </div>
