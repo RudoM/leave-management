@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Request;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,7 +21,6 @@ return new class extends Migration {
             $table->date('end_date');
             $table->string('type');
             $table->string('reason');
-            $table->integer('leave_days')->default(10);
             $table->timestamps();
         });
     }
